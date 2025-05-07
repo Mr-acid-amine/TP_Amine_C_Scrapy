@@ -7,10 +7,14 @@ class EjusticeSpider(scrapy.Spider):
     allowed_domains = ["ejustice.just.fgov.be"]
     
     def start_requests(self):
-        # Lecture des numéros d'entreprises depuis le fichier ou la fonction utilitaire
         for numero in lire_numero_entreprises():
-            url = f"https://www.ejustice.just.fgov.be/cgi_tsv/list.pl?btw={numero}&page=1"
-            yield scrapy.Request(url, callback=self.parse, meta={"numero": numero})
+            url = f"https://www.ejustice.just.fgov.be/cgi_tsv/list.pl?btw={numero}&lang=fr&page=1"
+            yield scrapy.Request(
+                url,
+                callback=self.parse,
+                meta={"numero": numero},
+                headers={"Accept-Language": "fr"}
+            )
 
     def parse(self, response):
         # Initialisation de l'item

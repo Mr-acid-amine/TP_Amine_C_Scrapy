@@ -26,7 +26,7 @@ scrapy_kbo_tp/
 │   │   ├── ejustice_spider.py    # Spider 2
 │   │   └── nbb_spider.py         # Spider 3 (non fonctionnel)
 └── README.md
-
+```
 ## ✅ Fonctionnalités
 
 - **KBO Spider** :

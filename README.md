@@ -15,12 +15,14 @@ Les données sont stockées dans une base MongoDB Atlas.
 ```bash
 scrapy_kbo_tp/
 ├── scrapy_kbo_tp/
+│   ├── middlewares.py
+│   ├── utils.py
 │   ├── items.py
 │   ├── pipelines.py  # MongoDB
 │   ├── settings.py
+│   ├── enterprises.csv 
 │   ├── spiders/
 │   │   ├── kbo_spider.py         # Spider 1
 │   │   ├── ejustice_spider.py    # Spider 2
 │   │   └── nbb_spider.py         # Spider 3 (non fonctionnel)
-├── numero_entreprises.csv       # Liste des numéros d’entreprise à scrapper
 └── README.md

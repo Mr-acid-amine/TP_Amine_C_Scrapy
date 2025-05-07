@@ -33,7 +33,7 @@ class KboSpider(scrapy.Spider):
         item = KboItem()
         item['EnterpriseNumber'] = response.meta['num']
 
-        # ---- Généralités (FR uniquement) ----
+        # ---- Généralités FR
         item['generalites'] = {
             'nom':             extract('Dénomination:'),
             'statut':          extract('Statut:'),

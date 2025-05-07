@@ -34,10 +34,10 @@ class EjusticeSpider(scrapy.Spider):
 
                 # Vérifier si les informations nécessaires sont présentes
                 if len(lines) >= 4:
-                    adresse = lines[0]  # Exemple : "FRANKRIJKSTRAAT 56 1060 SINT-GILLIS"
-                    bce = lines[1]  # Exemple : "203.430.576"
-                    type_pub = lines[2]  # Exemple : "KAPITAAL - AANDELEN - RUBRIEK HERSTRUCTURERING"
-                    date_ref = lines[3]  # Exemple : "2025-04-18 / 0051326"
+                    adresse = lines[0] 
+                    bce = lines[1]  
+                    type_pub = lines[2] 
+                    date_ref = lines[3]  
 
                     # On prépare l'objet publication
                     publication = {

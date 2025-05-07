@@ -41,3 +41,19 @@ scrapy_kbo_tp/
 - **NBB Spider** :
   - Le développement n’a pas pu être finalisé.
   - Objectif : récupérer les comptes annuels des entreprises à partir de la Banque Nationale de Belgique.
+
+## 💾 Base de données
+
+Les données sont stockées dans **MongoDB Atlas** sous la base de données `entreprises_db` avec des collections pour chaque spider :
+
+- `kbo_spider` : Informations générales des entreprises
+- `ejustice_spider` : Publications légales des entreprises
+- (à venir) : NBB Spider
+
+## 🚀 Exécution
+
+Lancer un spider :
+
+```bash
+scrapy crawl kbo_spider
+scrapy crawl ejustice_spider
